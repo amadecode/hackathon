@@ -48,35 +48,6 @@ app.get('/page-error404', (req, res)=>{
 });
 /*-------------------*/
 
-app.get('/pages-profile', (req, res)=>{
-	res.render("pages-profile");
-});
-
-app.get('/index', (req, res)=>{
-	res.render("index");
-});
-
-app.get('/icon-material', (req, res)=>{
-	res.render("icon-material");
-});
-
-app.get('/map-google', (req, res)=>{
-	res.render("map-google");
-});
-
-app.get('/pages-blank', (req, res)=>{
-	res.render("pages-blank");
-});
-
-app.get('/pages-error-404', (req, res)=>{
-	res.render("pages-error-404");
-});
-
-
-app.get('/table-basic', (req, res)=>{
-	res.render("table-basic");
-});
-
 app.post('/send', (req, res) => {
 	const output = `
 		<p>You have a new contact request</p>
@@ -92,14 +63,14 @@ app.post('/send', (req, res) => {
 	let transporter = nodemailer.createTransport({
 		service: 'gmail',
 		auth:{
-			user: 'cbalamanatuic@gmail.com',
-			pass: 'Ch3st3rarian3092986'
+			user: 'email@gmail.com',
+			pass: 'password'
 		}
 	});
 
 	let mailOptions = {
-		from: 'cbalamanatuic@gmail.com',
-		to: 'cbalamanatuic@gmail.com',
+		from: 'from@gmail.com',
+		to: 'to@gmail.com',
 		subject: 'Test Nodemailer...',
 		html: output
 	};
